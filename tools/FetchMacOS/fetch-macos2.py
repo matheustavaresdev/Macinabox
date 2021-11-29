@@ -32,6 +32,9 @@ if flavour == "Catalina" :
 if flavour == "Big Sur" :
     ANSWER=4
     print(ANSWER)
+if flavour == "Monterey" :
+    ANSWER=4
+    print(ANSWER)
     
 import os
 import sys
@@ -479,7 +482,7 @@ def main():
             {"name": "Mojave (10.14)", "b": "Mac-7BA5B2DFE22DDD8C", "m": "00000000000KXPG00"},
             {"name": "Catalina (10.15) - RECOMMENDED", "b": "Mac-00BE6ED71E35EB86", "m": "00000000000000000"},
             # {"name": "Latest (Big Sur - 11)", "b": "Mac-E43C1C25D4880AD6", "m": "00000000000000000", "os_type": "latest"}
-            {"name": "Latest (Big Sur - 11)", "b": "Mac-E43C1C25D4880AD6", "m": "00000000000000000", "os_type": "default"}
+            {"name": "Latest (Monterey - 12)", "b": "Mac-E43C1C25D4880AD6", "m": "00000000000000000", "os_type": "default"}
             ]
 
     for index, product in enumerate(products):

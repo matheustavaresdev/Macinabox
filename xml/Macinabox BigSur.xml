@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
-  <name>Macinabox BigSur</name>
-  <description>MacOS Big Sur</description>
+  <name>Macinabox Monterey</name>
+  <description>MacOS Monterey</description>
   <metadata>
-    <vmtemplate xmlns="unraid" name="BigSur" icon="BigSur.png" os="osx"/>
+    <vmtemplate xmlns="unraid" name="Monterey" icon="Monterey.png" os="osx"/>
   </metadata>
   <memory unit='KiB'>4194304</memory>
   <currentMemory unit='KiB'>4194304</currentMemory>
@@ -42,20 +42,20 @@
     <emulator>/usr/local/sbin/qemu</emulator>
     <disk type='file' device='disk'>
       <driver name='qemu' type='raw' cache='writeback'/>
-      <source file='YYYYBigSur-opencore.img'/>
+      <source file='YYYYMonterey-opencore.img'/>
       <target dev='hdc' bus='sata'/>
       <boot order='1'/>
       <address type='drive' controller='0' bus='0' target='0' unit='2'/>
     </disk>
     <disk type='file' device='disk'>
       <driver name='qemu' type='raw' cache='writeback'/>
-      <source file='YYYYBigSur-install.img'/>
+      <source file='YYYYMonterey-install.img'/>
       <target dev='hdd' bus='sata'/>
       <address type='drive' controller='0' bus='0' target='0' unit='3'/>
     </disk>
     <disk type='file' device='disk'>
       <driver name='qemu' type='raw' cache='writeback'/>
-      <source file='XXXXMacinabox BigSur/macos_disk.img'/>
+      <source file='XXXXMacinabox Monterey/macos_disk.img'/>
       <target dev='hde' bus='sata'/>
       <address type='drive' controller='0' bus='0' target='0' unit='4'/>
     </disk>

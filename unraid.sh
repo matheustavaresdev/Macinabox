@@ -238,13 +238,13 @@ fi
 	}
 	
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# #  Pull BigSur if not already downloaded    # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# #  Pull Monterey if not already downloaded    # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 	
 	
 	pullbigsur() {
 
-		if [ ! -e /isos/BigSur-install.img ] ; then
-			echo "I am going to download the BigSur recovery media. Please be patient!"
+		if [ ! -e /isos/Monterey-install.img ] ; then
+			echo "I am going to download the Monterey recovery media. Please be patient!"
 		    echo "."
 		    echo "."
 	    "/Macinabox/tools/FetchMacOS/fetch.sh" -v 10.16 -c PublicRelease -p 071-00696 || exit 1;
@@ -259,7 +259,7 @@ fi
 	}
 	
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# #  Extract BigSur from InstallAssistant.pkg if using script1    # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# #  Extract Monterey from InstallAssistant.pkg if using script1    # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 			
 	
@@ -376,8 +376,14 @@ if [ "$flavour" == "Catalina" ] ; then
 	pullcatalina
 	automanual
 elif [ "$flavour" == "Big Sur" ] ; then	
-    XML="Macinabox BigSur"
-	NAME="BigSur"
+    XML="Macinabox Monterey"
+	NAME="Monterey"
+	DOMAIN=/domains/"$XML"
+	pullbigsur && extractbigsur
+    automanual
+elif [ "$flavour" == "Monterey" ] ; then	
+    XML="Macinabox Monterey"
+	NAME="Monterey"
 	DOMAIN=/domains/"$XML"
 	pullbigsur && extractbigsur
     automanual
