@@ -16,7 +16,6 @@ RUN apk add \
     && rm -rf /var/cache/apk/* /tmp/* /tmp/.[!.]*
 
 # Download virt-manager from git
-# RUN git clone https://github.com/matheustavaresdev/virt-manager.git
 RUN git clone https://github.com/virt-manager/virt-manager.git
 
 
